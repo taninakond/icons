@@ -28,8 +28,7 @@ function renderIcons(filter = "") {
       <div class="icon-label">${iconLabel}</div>
     `;
         div.addEventListener("click", () => {
-            navigator.clipboard.writeText(icon);
-            // navigator.clipboard.writeText(`<span class="material-symbols-rounded">${icon}</span>`);
+            navigator.clipboard.writeText(`<span class="material-symbols-rounded">${icon}</span>`);
             div.classList.add("show-tooltip");
             setTimeout(() => div.classList.remove("show-tooltip"), 1000);
         });
